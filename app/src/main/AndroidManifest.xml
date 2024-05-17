@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PastryPalITEL2FinalProject"
+        tools:targetApi="31">
+        <activity
+            android:name=".Logout"
+            android:exported="false" />
+        <activity
+            android:name=".MatchaCookies"
+            android:exported="false" />
+        <activity
+            android:name=".ChocolateChip"
+            android:exported="false" />
+        <activity
+            android:name=".Matcha"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
+            android:name=".SeeAll"
+            android:exported="false" />
+        <activity
+            android:name=".Favorite"
+            android:exported="false" />
+        <activity
+            android:name=".SearchRecycleView"
+            android:exported="false" />
+        <activity
+            android:name=".Search"
+            android:exported="false" />
+        <activity
+            android:name=".AllRecipes"
+            android:exported="false" />
+        <activity
+            android:name=".Cupcake"
+            android:exported="false" />
+        <activity
+            android:name=".Cookie"
+            android:exported="false" />
+        <activity
+            android:name=".Bread"
+            android:exported="false" />
+        <activity
+            android:name=".VanillaCupcake"
+            android:exported="false" />
+        <activity
+            android:name=".Pandesal"
+            android:exported="false" />
+        <activity
+            android:name=".CarrotCupcake"
+            android:exported="false" />
+        <activity
+            android:name=".Putok"
+            android:exported="false" />
+        <activity
+            android:name=".Croissant"
+            android:exported="false" />
+        <activity
+            android:name=".UbeBreadRolls"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="Categories" type="id" />
+    <item name="featuredRecipesImagesLayoutPart2" type="id" />
+    <item name="featuredRecipesImagesLayout" type="id" />
+    <item name="featuredRecipesLayout" type="id" />
+    <item name="header" type="id" />
+    <item name="imgLogo" type="id" />
+</resources>

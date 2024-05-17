@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFCE2"
+    tools:context=".MainActivity">
+
+    <!-- Fixed header layout -->
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#75473D">
+
+        <!-- Logo and Good Day message -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/imgLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="7dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/pink_white_cute_illustration_cake_logo"
+                android:background="@null"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txtGoodDayUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="27dp"
+                android:text="@string/good_day_username"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:fontFamily="sans-serif-medium" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:layout_constraintBottom_toTopOf="@id/bottomBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <!-- Featured Recipes Section -->
+    <LinearLayout
+        android:id="@+id/featuredRecipesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtFeaturesRecipes"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/featured_recipes"
+            android:textColor="#F6ACB7"
+            android:textSize="32sp" />
+
+        <Button
+            android:id="@+id/btnSeeAllFeatured"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/custom_button_background"
+            android:text="@string/see_all"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Featured Recipes Images and Text -->
+    <LinearLayout
+        android:id="@+id/featuredRecipesImagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/featuredRecipesLayout"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Carrot Cupcake -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnCarrotCupcake"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/carrot_cupcake"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/carrotcupcake" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCarrotCupcake"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/carrot_cupcake"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Croissant -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnCroissant"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/croissant"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/croissant" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCroissant"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/croissant"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Ube Bread Rolls -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnUbeBreadRolls"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/ube_bread_roll"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/ubebreadrolls" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnUbeBreadRolls"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/ube_bread_roll"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/featuredRecipesImagesLayoutPart2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/featuredRecipesImagesLayout"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical">
+
+        <!-- Carrot Cupcake -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="1dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnPutok"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/putok"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/putok" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnPutok"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/putok"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Croissant -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnPandesal"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/pandesal"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/pandesal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnPandesal"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/pandesal"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Ube Bread Rolls -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnVanillaCupcake"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/vanilla_cupcake"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/vanillacupcake" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnVanillaCupcake"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/vanilla_cupcake"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/featuredRecipesImagesLayoutPart2"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/txtCategories"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/categories"
+            android:textColor="#F6ACB7"
+            android:textSize="32sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Categories"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Cupcake -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="2dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnCupcake"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/categories_cupcake"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/o" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCupcake"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/categories_cupcake"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Bread -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnBread"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/categories_bread"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/p" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBread"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/categories_bread"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <!-- Cookies -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_button_background"
+            android:gravity="center"
+            android:layout_marginStart="6dp"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btnCookie"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:background="@drawable/rounded_button"
+                android:contentDescription="@string/categories_cookies"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="3dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:srcCompat="@drawable/i" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCookie"
+                android:layout_centerHorizontal="true"
+                android:gravity="bottom"
+                android:text="@string/categories_cookies"
+                android:textColor="#75473D"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#B78650"
+        android:padding="6dp"
+        android:layout_alignParentBottom="true">
+
+        <!-- Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/homeicon"
+                app:srcCompat="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/home"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+
+        <!-- Profile -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profileprofileicon"
+                app:srcCompat="@drawable/profileprofileicon" />
+
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/profile"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

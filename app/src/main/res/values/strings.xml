@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">PastryPalITEL2FinalProject</string>
+    <string name="good_day_username">Good day, USERNAME</string>
+    <string name="featured_recipes">Featured Recipes</string>
+
+    <string name="croissant">Croissant</string>
+    <string name="ube_bread_roll">Ube Bread Rolls</string>
+    <string name="putok">Putok</string>
+    <string name="pandesal">Pandesal</string>
+
+
+    <string name="vanilla_cupcake">Vanilla Cupcake</string>
+    <string name="carrot_cupcake">Carrot Cupcake</string>
+    <string name="strawberry_cheese_cupcake">Strawberry Cheese Cupcake</string>
+
+    <string name="cookies">Cookies</string>
+    <string name="mactha_cookies">Matcha Cookies</string>
+    <string name="red_velvet_cookies">Red Velvet Cookies</string>
+    <string name="chocolate_chip_cookies">Chocolate Chip Cookies</string>
+
+    <string name="categories">Categories</string>
+    <string name="categories_cupcake">Cupcake</string>
+    <string name="categories_cookies">Cookie</string>
+    <string name="categories_bread">Bread</string>
+
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+
+    <string name="see_all">See All</string>
+
+    <string name="difficulty_level">Difficulty Level</string>
+
+    <string name="easy_level">Easy</string>
+    <string name="medium_level">Medium</string>
+    <string name="hard_level">Hard</string>
+
+
+    <string name="description">Description</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="servings">Servings</string>
+    <string name="preparation">Preparation</string>
+    <string name="instruction">Instruction</string>
+
+    <string name="total_time">Total Time</string>
+    <string name="prep_time">Prep Time</string>
+    <string name="cook_time">Cook Time</string>
+
+    <string name="back">&lt;</string>
+
+    <string name="cupcake">Cupcakes</string>
+
+    <string name="allRecipe">All Recipes</string>
+    <string name="profile">Profile</string>
+    <string name="profile_name">Name</string>
+    <string name="profile_email">Email</string>
+
+    <string name="search_hint">Search...</string>
+    <string name="search">Search</string>
+
+    <string name="short_Description_CarrotCupcake">Moist, spiced, carrot-filled delight.</string>
+    <string name="short_Description_VanillaCupcake">Classic fluffy vanilla treat.</string>
+    <string name="short_Description_Putok">Soft Filipino bread treat.</string>
+    <string name="short_Description_Croissant">Buttery, flaky French pastry.</string>
+    <string name="short_Description_UbeBreadRolls">Purple-hued, sweet bread delight.</string>
+    <string name="short_Description_Pandesal">Traditional Filipino breakfast roll.</string>
+    <string name="short_Description_Matcha">Flavorful matcha-infused cookies.</string>
+    <string name="short_Description_ChocolateChips">Delicious, chewy, chocolatey cookies.</string>
+
+
+    <string name="matcha_cookie">Matcha Cookie</string>
+    <string name="title">About Us</string>
+
+</resources>

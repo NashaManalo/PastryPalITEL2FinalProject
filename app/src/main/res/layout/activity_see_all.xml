@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFDE3">
+
+    <!-- Header section with Back button and Cupcake text -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#75473D"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="53dp"
+            android:layout_height="50dp"
+            android:background="#75473D"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/txtAllRecipes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/allRecipe"
+            android:textColor="#F6ACB7"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imgLogo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="140dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            android:background="@null"
+            android:scaleType="centerCrop" />
+
+    </LinearLayout>
+
+
+    <!-- Scrollable content section -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnCarrotCupcake"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/carrotcupcake" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtCarrotCupcakeCupcake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/carrot_cupcake"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtCarrotCupcakeShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_CarrotCupcake" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/imgStar1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/imgStar2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/imgStar3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnVanillaCupcake"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vanillacupcake" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtVanillaCupcake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/vanilla_cupcake"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtVanillaCupcakeShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_CarrotCupcake" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img2Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img2Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img2Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnPutok"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/putok" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtPutok"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/putok"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtPutokShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_Putok" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img3Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img3Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnCroissant"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imgCroissant"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/croissant" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtCroissant"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/croissant"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtCroissantShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_Croissant" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img4Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img4Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img4Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnPandesal"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton8"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/pandesal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtPandesal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/pandesal"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtPandesalShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_Pandesal" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img5Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img5Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img5Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnUbeBreadRolls"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imgUbeBreadRolls"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ubebreadrolls" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtUbeBreadRoll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/ube_bread_roll"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtUbeBreadRollShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_UbeBreadRolls" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img6Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img6Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img6Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnMatchaCookies"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imgMatchaCookies"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/matcha" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtMatchaCookies"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/mactha_cookies"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtMatchaCookiesShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_Matcha" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img7Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img7Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img7Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:id="@+id/btnChocolateChipCookies"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true"
+                android:textColor="#F6ACB7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#F6ACB7"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/imgChocolateChipCookies"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/chocochip" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/txtChocolateChipCookies"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="@string/chocolate_chip_cookies"
+                            android:textColor="#75473D"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/txtChocolateChipCookiesShortDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="#75473D"
+                            android:textSize="12sp"
+                            android:text="@string/short_Description_ChocolateChips" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <ImageView
+                                android:id="@+id/img8Star1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null" />
+
+                            <ImageView
+                                android:id="@+id/img8Star2"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+
+                            <ImageView
+                                android:id="@+id/img8Star3"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@android:drawable/btn_star_big_on"
+                                android:background="@null"
+                                android:layout_marginStart="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#B78650"
+        android:padding="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/homeicon"
+                app:srcCompat="@drawable/homeicon" />
+
+            <TextView
+                android:id="@+id/txtHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/home"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/profileprofileicon"
+                app:srcCompat="@drawable/profileprofileicon" />
+
+            <TextView
+                android:id="@+id/txtProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/profile"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+
+
