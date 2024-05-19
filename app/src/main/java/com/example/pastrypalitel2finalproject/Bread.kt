@@ -7,13 +7,15 @@ import com.example.pastrypalitel2finalproject.databinding.ActivityBreadBinding
 
 class Bread : AppCompatActivity() {
     private lateinit var binding: ActivityBreadBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBreadBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.btnBack.setOnClickListener {
-            val intent = Intent (this, MainActivity::class.java)
+            val intent = Intent (this, Homescreen::class.java)
             startActivity(intent)
         }
 
@@ -21,41 +23,26 @@ class Bread : AppCompatActivity() {
             startActivity(Intent(this, Croissant::class.java))
         }
 
-        binding.btnCroissant.setOnClickListener {
-            val intent = Intent(this, Croissant::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
-            startActivity(intent)
-        }
 
         binding.btnUbeBreadRolls.setOnClickListener {
             startActivity(Intent(this, UbeBreadRolls::class.java))
         }
 
-        binding.btnUbeBreadRolls.setOnClickListener {
-            val intent = Intent(this, UbeBreadRolls::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
-            startActivity(intent)
-        }
 
         binding.btnPutok.setOnClickListener {
             startActivity(Intent(this, Putok::class.java))
         }
 
-        binding.btnPutok.setOnClickListener(){
-            val intent = Intent (this, Putok::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
-            startActivity(intent)
-        }
 
         binding.btnPandesal.setOnClickListener {
             startActivity(Intent(this, Pandesal::class.java))
         }
 
-        binding.btnPandesal.setOnClickListener(){
-            val intent = Intent (this, Pandesal::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
-            startActivity(intent)
+
+        binding.imageButton7.setOnClickListener {
+            startActivity(Intent(this, Homescreen::class.java))
         }
+
 
         binding.imageButton12.setOnClickListener {
             val intent = Intent(this, Profile::class.java)

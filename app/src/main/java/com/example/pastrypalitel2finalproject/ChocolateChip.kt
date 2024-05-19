@@ -1,6 +1,5 @@
 package com.example.pastrypalitel2finalproject
 
-import ChocolateChipAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -59,16 +58,18 @@ class ChocolateChip : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        binding.imageButton7.setOnClickListener(){
-            val intent = Intent (this, MainActivity::class.java)
+        binding.imageButton7.setOnClickListener {
+            val intent = Intent (this, Homescreen::class.java)
             startActivity(intent)
         }
 
         binding.btnBack.setOnClickListener {
             if (launchedFromSeeAll) {
-                onBackPressed() // Go back to See All Recipes
+                 // Go back to See All Recipes
+                startActivity(Intent(this, SeeAll::class.java))
             } else {
-                startActivity(Intent(this, MainActivity::class.java)) // Go back to Main Activity
+                // Go back to Main Activity
+                onBackPressed()
             }
         }
 

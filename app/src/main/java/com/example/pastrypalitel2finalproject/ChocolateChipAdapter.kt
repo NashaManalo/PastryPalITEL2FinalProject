@@ -1,7 +1,9 @@
+package com.example.pastrypalitel2finalproject
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pastrypalitel2finalproject.ChocolateChipItem
 import com.example.pastrypalitel2finalproject.databinding.ItemChocolatechipRecipeBinding
 
 class ChocolateChipAdapter(private val chocolateChipList: List<ChocolateChipItem>) :
@@ -10,6 +12,7 @@ class ChocolateChipAdapter(private val chocolateChipList: List<ChocolateChipItem
     inner class ChocolateChipViewHolder(private val binding: ItemChocolatechipRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(chocolateChip: ChocolateChipItem) {
             binding.imageView13.setImageResource(chocolateChip.imageResourceId)
             binding.txtChocolateChip.text = chocolateChip.title

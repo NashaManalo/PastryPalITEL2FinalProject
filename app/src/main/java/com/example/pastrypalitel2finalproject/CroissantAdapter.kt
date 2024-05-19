@@ -1,7 +1,9 @@
+package com.example.pastrypalitel2finalproject
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pastrypalitel2finalproject.CroissantItem
 import com.example.pastrypalitel2finalproject.databinding.ItemCroissantRecipeBinding
 
 class CroissantAdapter(private val croissantList: List<CroissantItem>) :
@@ -10,6 +12,7 @@ class CroissantAdapter(private val croissantList: List<CroissantItem>) :
     inner class CroissantViewHolder(private val binding: ItemCroissantRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(croissant: CroissantItem) {
             binding.imageView13.setImageResource(croissant.imageResourceId)
             binding.txtCroissant.text = croissant.title

@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ class MatchaCookiesAdapter(private val matchaCookieList: List<MatchaCookiesItem>
     inner class MatchaCookieViewHolder(private val binding: ItemMatchacookiesRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(matchaCookies: MatchaCookiesItem) {
             binding.imageView13.setImageResource(matchaCookies.imageResourceId)
             binding.txtMatchaCookies.text = matchaCookies.title

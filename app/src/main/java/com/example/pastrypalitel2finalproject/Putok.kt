@@ -71,7 +71,7 @@ Sugar for topping
         binding.recyclerView.adapter = adapter
 
         binding.imageButton7.setOnClickListener(){
-            val intent = Intent (this, MainActivity::class.java)
+            val intent = Intent (this, Homescreen::class.java)
             startActivity(intent)
         }
 
@@ -82,9 +82,14 @@ Sugar for topping
 
         binding.btnBack.setOnClickListener {
             if (launchedFromSeeAll) {
-                onBackPressed() // Go back to See All Recipes
+                // If launched from See All, go back to Home screen
+                // Optionally, you can pass a flag to the Home screen activity
+                // to indicate that it was launched from See All, if needed
+                startActivity(Intent(this, SeeAll::class.java))
+                finish()
             } else {
-                startActivity(Intent(this, MainActivity::class.java)) // Go back to Main Activity
+                // If launched from Home screen, go back to the previous activity
+                onBackPressed()
             }
         }
     }

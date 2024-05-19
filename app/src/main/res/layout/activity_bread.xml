@@ -23,7 +23,8 @@
             android:layout_width="53dp"
             android:layout_height="50dp"
             android:background="#75473D"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/txtAllRecipes"
@@ -39,11 +40,12 @@
             android:id="@+id/imgLogo"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginStart="165dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            android:layout_marginStart="165dp"
             android:background="@null"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     </LinearLayout>
 
@@ -66,7 +68,8 @@
                 android:orientation="horizontal"
                 android:padding="8dp"
                 android:layout_marginTop="8dp"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                tools:ignore="DisableBaselineAlignment">
 
                 <!-- Carrot Cupcake -->
                 <RelativeLayout
@@ -91,7 +94,8 @@
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        app:srcCompat="@drawable/croissant" />
+                        app:srcCompat="@drawable/croissant"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -130,7 +134,8 @@
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        app:srcCompat="@drawable/pandesal" />
+                        app:srcCompat="@drawable/pandesal"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -154,7 +159,8 @@
                 android:orientation="horizontal"
                 android:padding="8dp"
                 android:layout_marginTop="8dp"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                tools:ignore="DisableBaselineAlignment">
 
                 <!-- Carrot Cupcake -->
                 <RelativeLayout
@@ -179,7 +185,8 @@
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        app:srcCompat="@drawable/putok" />
+                        app:srcCompat="@drawable/putok"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -218,7 +225,8 @@
                         android:textColor="#FFFFFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
-                        app:srcCompat="@drawable/ubebreadrolls" />
+                        app:srcCompat="@drawable/ubebreadrolls"
+                        tools:ignore="DuplicateSpeakableTextCheck" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -245,7 +253,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#B78650"
-        android:padding="6dp">
+        android:padding="6dp"
+        tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -259,7 +268,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/homeicon"
-                app:srcCompat="@drawable/homeicon" />
+                app:srcCompat="@drawable/homeicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtHome"
@@ -268,7 +278,8 @@
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
@@ -284,7 +295,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/profileprofileicon"
-                app:srcCompat="@drawable/profileprofileicon" />
+                app:srcCompat="@drawable/profileprofileicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtProfile"
@@ -292,8 +304,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/profile"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textAlignment="center" />
+                tools:ignore="TextContrastCheck" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -10,5 +10,4 @@ data class MatchaCookiesItem (
     val totalTime: String,
     val prepTime: String,
     val cookTime: String,
-    val instructions: String
-)
+    val instructions: String)

@@ -1,6 +1,5 @@
 package com.example.pastrypalitel2finalproject
 
-import CroissantAdapter
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -83,7 +82,7 @@ Let the croissants cool on a wire rack before serving. They are best enjoyed fre
         binding.recyclerView.adapter = adapter
 
         binding.imageButton7.setOnClickListener {
-            val intent = Intent (this, MainActivity::class.java)
+            val intent = Intent (this, Homescreen::class.java)
             startActivity(intent)
         }
 
@@ -94,16 +93,14 @@ Let the croissants cool on a wire rack before serving. They are best enjoyed fre
 
         binding.btnBack.setOnClickListener {
             if (launchedFromSeeAll) {
-                onBackPressed()
+                // If launched from See All, go back to Home screen
+                // Optionally, you can pass a flag to the Home screen activity
+                // to indicate that it was launched from See All, if needed
+                startActivity(Intent(this, SeeAll::class.java))
+                finish()
             } else {
-                startActivity(Intent(this, MainActivity::class.java)) // Go back to Main Activity
-            }
-        }
-        binding.btnBack.setOnClickListener {
-            if (launchedFromSeeAll) {
+                // If launched from Home screen, go back to the previous activity
                 onBackPressed()
-            } else {
-                startActivity(Intent(this, MainActivity::class.java)) // Go back to Main Activity
             }
         }
     }

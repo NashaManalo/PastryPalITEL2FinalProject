@@ -23,17 +23,19 @@
             android:layout_width="53dp"
             android:layout_height="50dp"
             android:background="#75473D"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imgLogo"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginStart="255dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            android:layout_marginStart="255dp"
             android:background="@null"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     </LinearLayout>
 
@@ -50,7 +52,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#B78650"
-        android:padding="6dp">
+        android:padding="6dp"
+        tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -64,7 +67,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/homeicon"
-                app:srcCompat="@drawable/homeicon" />
+                app:srcCompat="@drawable/homeicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtHome"
@@ -73,7 +77,8 @@
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
@@ -89,7 +94,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/profileprofileicon"
-                app:srcCompat="@drawable/profileprofileicon" />
+                app:srcCompat="@drawable/profileprofileicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtProfile"
@@ -97,8 +103,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/profile"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textAlignment="center" />
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 

@@ -8,42 +8,33 @@ import com.example.pastrypalitel2finalproject.databinding.ActivityCookieBinding
 class Cookie : AppCompatActivity() {
     private lateinit var binding: ActivityCookieBinding
 
-    private var launchedFromSeeAll = false
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCookieBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        launchedFromSeeAll = intent.getBooleanExtra("launchedFromSeeAll", false)
-
-        binding.btnBack.setOnClickListener(){
-            val intent = Intent (this, MainActivity::class.java)
+        binding.btnBack.setOnClickListener {
+            val intent = Intent(this, Homescreen::class.java) // Navigate to Homescreen
             startActivity(intent)
         }
 
         binding.btnChocolateChipCookies.setOnClickListener {
-            startActivity(Intent(this, ChocolateChip::class.java))
-        }
-
-        binding.btnChocolateChipCookies.setOnClickListener(){
             val intent = Intent (this, ChocolateChip::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
             startActivity(intent)
         }
 
         binding.btnMatchaCookies.setOnClickListener {
-            startActivity(Intent(this, MatchaCookies::class.java))
-        }
-
-        binding.btnMatchaCookies.setOnClickListener {
-            val intent = Intent(this, MatchaCookies::class.java)
-            intent.putExtra("launchedFromSeeAll", true)
+            val intent = Intent (this, MatchaCookies::class.java)
             startActivity(intent)
         }
 
         binding.imageButton7.setOnClickListener {
-            val intent = Intent (this, MainActivity::class.java)
+            val intent = Intent (this, Homescreen::class.java)
+            startActivity(intent)
+        }
+
+        binding.imageButton12.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
 

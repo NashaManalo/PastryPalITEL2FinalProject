@@ -23,17 +23,19 @@
             android:layout_width="53dp"
             android:layout_height="50dp"
             android:background="#75473D"
-            app:srcCompat="@drawable/baseline_arrow_back_24" />
+            app:srcCompat="@drawable/baseline_arrow_back_24"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
         <ImageButton
             android:id="@+id/imgLogo"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginStart="255dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            android:layout_marginStart="255dp"
             android:background="@null"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/pink_white_cute_illustration_cake_logo"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     </LinearLayout>
 
@@ -51,7 +53,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="20dp"
-            app:srcCompat="@drawable/design2" />
+            app:srcCompat="@drawable/design2"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/textView"
@@ -71,7 +74,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="5dp"
-            app:srcCompat="@drawable/design1" />
+            app:srcCompat="@drawable/design1"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
     <!-- Linear Layout for About Text -->
@@ -89,13 +93,14 @@
             android:id="@+id/textView2"
             android:layout_width="300dp"
             android:layout_height="700dp"
-            android:layout_marginLeft="52dp"
+            android:layout_marginStart="52dp"
             android:textAlignment="center"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/bottomBar"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="VisualLintBounds" />
     </LinearLayout>
 
     <LinearLayout
@@ -107,7 +112,8 @@
         android:padding="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="DisableBaselineAlignment">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -121,7 +127,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/homeicon"
-                app:srcCompat="@drawable/homeicon" />
+                app:srcCompat="@drawable/homeicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtHome"
@@ -130,7 +137,8 @@
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/home"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                tools:ignore="TextContrastCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,7 +153,8 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/profileprofileicon"
-                app:srcCompat="@drawable/profileprofileicon" />
+                app:srcCompat="@drawable/profileprofileicon"
+                tools:ignore="ContentDescription,ImageContrastCheck,SpeakableTextPresentCheck" />
 
             <TextView
                 android:id="@+id/txtProfile"
@@ -153,8 +162,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed"
                 android:text="@string/profile"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
-                android:textAlignment="center" />
+                tools:ignore="TextContrastCheck" />
         </LinearLayout>
     </LinearLayout>
 

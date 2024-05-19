@@ -2,78 +2,78 @@ package com.example.pastrypalitel2finalproject
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pastrypalitel2finalproject.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Setting up button click listeners
-        binding.btnUbeBreadRolls.setOnClickListener {
-            val intent = Intent(this, UbeBreadRolls::class.java)
+        auth = Firebase.auth
+
+        // Set OnClickListener for the register button
+        binding.register.setOnClickListener {
+            // Create an Intent to start the RegisterActivity
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        binding.btnCroissant.setOnClickListener {
-            val intent = Intent(this, Croissant::class.java)
-            startActivity(intent)
-        }
+        binding.btnlogin.setOnClickListener {
+            val email = binding.username.text.toString().trim() // Assuming username field holds email
+            val password = binding.password.text.toString().trim()
 
-        binding.btnPutok.setOnClickListener {
-            val intent = Intent(this, Putok::class.java)
-            startActivity(intent)
-        }
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please fill all fields", LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
-        binding.btnCarrotCupcake.setOnClickListener {
-            val intent = Intent(this, CarrotCupcake::class.java)
-            startActivity(intent)
-        }
+            // Store the email in lowercase for comparison
+            val normalizedEmail = email.lowercase()
 
-        binding.btnPandesal.setOnClickListener {
-            val intent = Intent(this, Pandesal::class.java)
-            startActivity(intent)
-        }
+            auth.signInWithEmailAndPassword(normalizedEmail, password)
+                .addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        // Sign in success, display toast and navigate to HomeScreen
+                        Log.d("TAG", "signInWithEmail:success")
+                        Toast.makeText(this, "Login Successful", LENGTH_SHORT).show()
+                        val intent = Intent(this, Homescreen::class.java) // Replace with your home screen activity
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        // Sign in failed, display a more specific error message
+                        Log.w("TAG", "signInWithEmail:failure", task.exception)
+                        val exception = task.exception
 
-        binding.btnVanillaCupcake.setOnClickListener {
-            val intent = Intent(this, VanillaCupcake::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnCupcake.setOnClickListener {
-            val intent = Intent(this, Cupcake::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnBread.setOnClickListener {
-            val intent = Intent(this, Bread::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnCookie.setOnClickListener {
-            val intent = Intent(this, Cookie::class.java)
-            startActivity(intent)
-        }
-
-
-        binding.btnSeeAllFeatured.setOnClickListener {
-            val intent = Intent(this, SeeAll::class.java)
-            startActivity(intent)
-        }
-
-        binding.imageButton12.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
-            startActivity(intent)
-        }
-
-        binding.imgLogo.setOnClickListener {
-            val intent = Intent(this, AboutUs::class.java)
-            startActivity(intent)
+                        if (exception is FirebaseAuthInvalidUserException) {
+                            // Email is not yet registered
+                            Toast.makeText(this, "Email is not yet registered.", LENGTH_SHORT).show()
+                        } else if (exception is FirebaseAuthInvalidCredentialsException) {
+                            val message = exception.message ?: ""
+                            if (message.contains("INVALID_EMAIL")) {
+                                Toast.makeText(this, "Invalid email format.", LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this, "Incorrect email or password.", LENGTH_SHORT).show()
+                            }
+                        } else {
+                            // Other error
+                            Toast.makeText(this, "Authentication failed.", LENGTH_SHORT).show()
+                        }
+                    }
+                }
         }
     }
-
 }
+

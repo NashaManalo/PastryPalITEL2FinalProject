@@ -66,16 +66,17 @@ class MatchaCookies : AppCompatActivity() {
 
         // Navigation to MainActivity
         binding.imageButton7.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, Homescreen::class.java)
             startActivity(intent)
         }
 
         // Back button handling
         binding.btnBack.setOnClickListener {
             if (launchedFromSeeAll) {
-                onBackPressed() // Go back to See All Recipes
+                 // Go back to See All Recipes
+                startActivity(Intent(this, SeeAll::class.java))
             } else {
-                startActivity(Intent(this, MainActivity::class.java)) // Go back to Main Activity
+                onBackPressed() // Go back to Main Activity
             }
         }
 

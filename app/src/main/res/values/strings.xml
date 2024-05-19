@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">PastryPalITEL2FinalProject</string>
-    <string name="good_day_username">Good day, USERNAME</string>
+    <string name="good_day_username">Good day, FreshyeWraps</string>
     <string name="featured_recipes">Featured Recipes</string>
 
     <string name="croissant">Croissant</string>
@@ -70,4 +70,18 @@
     <string name="matcha_cookie">Matcha Cookie</string>
     <string name="title">About Us</string>
 
+
+    <string name="app_name1">FinalProject_PastryApp</string>
+    <string name="app_name2">PASTRY PAL</string>
+    <string name="username">Name</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">LOGIN</string>
+    <string name="register">Don\'t have an account? Register</string>
+    <string name="screen_name_register">REGISTER</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="account">Already have an account?</string>
+
+    <string name="go_back_to_login_screen">Go back to login</string>
 </resources>

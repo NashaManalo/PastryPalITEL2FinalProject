@@ -10,5 +10,4 @@ data class PutokItem (
     val totalTime: String,
     val prepTime: String,
     val cookTime: String,
-    val instructions: String
-)
+    val instructions: String)

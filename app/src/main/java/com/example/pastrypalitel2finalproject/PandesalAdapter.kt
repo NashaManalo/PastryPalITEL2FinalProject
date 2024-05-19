@@ -1,7 +1,9 @@
+package com.example.pastrypalitel2finalproject
+
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.pastrypalitel2finalproject.PandesalItem
 import com.example.pastrypalitel2finalproject.databinding.ItemPandesalRecipeBinding
 
 class PandesalAdapter(private val pandesalList: List<PandesalItem>) :
@@ -10,6 +12,7 @@ class PandesalAdapter(private val pandesalList: List<PandesalItem>) :
     inner class PandesalViewHolder(private val binding: ItemPandesalRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(pandesal: PandesalItem) {
             binding.imageView13.setImageResource(pandesal.imageResourceId)
             binding.txtPandesal.text = pandesal.title

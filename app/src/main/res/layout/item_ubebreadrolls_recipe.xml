@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -13,7 +14,8 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/ubebreadrollslandscape"
-        app:srcCompat="@drawable/ubebreadrollslandscape" />
+        app:srcCompat="@drawable/ubebreadrollslandscape"
+        tools:ignore="ContentDescription" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -176,7 +178,8 @@
             android:textColor="#75473D"
             android:layout_marginTop="14dp"
             android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="4dp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/txtinstruction"
@@ -184,6 +187,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFEA8C95"
             android:textSize="16sp"
-            android:layout_marginTop="2dp" />
+            android:layout_marginTop="2dp"
+            tools:ignore="VisualLintBounds" />
     </LinearLayout>
 </LinearLayout>

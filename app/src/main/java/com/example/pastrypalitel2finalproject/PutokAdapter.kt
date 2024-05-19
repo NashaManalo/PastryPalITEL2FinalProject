@@ -1,4 +1,5 @@
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ class PutokAdapter(private val putokList: List<PutokItem>) :
     inner class PutokViewHolder(private val binding: ItemPutokRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(putok: PutokItem) {
             binding.imageView13.setImageResource(putok.imageResourceId)
             binding.txtPutok.text = putok.title

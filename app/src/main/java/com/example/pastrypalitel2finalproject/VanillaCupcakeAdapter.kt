@@ -1,4 +1,5 @@
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ class VanillaCupcakeAdapter(private val vanillaCupcakeList: List<VanillaCupcakeI
     inner class VanillaCupcakeViewHolder(private val binding: ItemVanillacupcakeRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(vanillaCupcake: VanillaCupcakeItem) {
             binding.imageView13.setImageResource(vanillaCupcake.imageResourceId)
             binding.txtVanillaCupcake.text = vanillaCupcake.title

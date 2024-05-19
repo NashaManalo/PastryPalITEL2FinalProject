@@ -1,3 +1,4 @@
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ class UbeBreadRollsAdapter(private val ubeBreadRollsList: List<UbeBreadRollsItem
     inner class UbeBreadRollsViewHolder(private val binding: ItemUbebreadrollsRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(ubeBreadRolls: UbeBreadRollsItem) {
             binding.imageView13.setImageResource(ubeBreadRolls.imageResourceId)
             binding.txtUbeBreadRolls.text = ubeBreadRolls.title

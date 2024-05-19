@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -13,12 +14,14 @@
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
         android:src="@drawable/pandesallong"
-        app:srcCompat="@drawable/pandesallong" />
+        app:srcCompat="@drawable/pandesallong"
+        tools:ignore="ContentDescription" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        tools:ignore="VisualLintBounds">
 
         <TextView
             android:id="@+id/txtPandesal"
@@ -39,7 +42,8 @@
             android:fontFamily="sans-serif-medium"
             android:text="@string/difficulty_level"
             android:textColor="#75473D"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="VisualLintBounds" />
 
     </RelativeLayout>
 
@@ -49,13 +53,15 @@
         android:layout_height="wrap_content"
         android:textColor="#FFEA8C95"
         android:layout_marginTop="5dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        tools:ignore="VisualLintBounds" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="7dp">
+        android:padding="7dp"
+        tools:ignore="VisualLintBounds">
 
         <TextView
             android:id="@+id/txtIngredients"
@@ -65,7 +71,8 @@
             android:fontFamily="sans-serif-medium"
             android:text="@string/ingredients"
             android:textSize="16sp"
-            android:textColor="#75473D" />
+            android:textColor="#75473D"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/txtServings"
@@ -74,7 +81,8 @@
             android:layout_marginTop="3dp"
             android:fontFamily="sans-serif-medium"
             android:textColor="#75473D"
-            android:textSize="12sp" />
+            android:textSize="12sp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/txtIngredientsPandesal"
@@ -82,7 +90,8 @@
             android:layout_height="wrap_content"
             android:textColor="#FFEA8C95"
             android:layout_marginTop="5dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/txtpreparation"
@@ -93,12 +102,14 @@
             android:textColor="#75473D"
             android:layout_marginTop="10dp"
             android:textSize="16sp"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            tools:ignore="VisualLintBounds" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="VisualLintBounds">
 
             <TextView
                 android:id="@+id/txttotal_time"
@@ -137,7 +148,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="VisualLintBounds">
 
             <TextView
                 android:id="@+id/txttotalTimeText"
@@ -176,7 +188,8 @@
             android:textColor="#75473D"
             android:layout_marginTop="14dp"
             android:textSize="16sp"
-            android:layout_marginBottom="4dp" />
+            android:layout_marginBottom="4dp"
+            tools:ignore="VisualLintBounds" />
 
         <TextView
             android:id="@+id/txtinstruction"
@@ -184,6 +197,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFEA8C95"
             android:textSize="16sp"
-            android:layout_marginTop="2dp" />
+            android:layout_marginTop="2dp"
+            tools:ignore="VisualLintBounds" />
     </LinearLayout>
 </LinearLayout>

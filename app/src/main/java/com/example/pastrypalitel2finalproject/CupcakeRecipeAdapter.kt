@@ -1,5 +1,6 @@
 package com.example.pastrypalitel2finalproject
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,6 +12,7 @@ class CupcakeRecipeAdapter(private val recipeList: List<CupcakeRecipe>) :
     inner class CupcakeRecipeViewHolder(private val binding: ItemCupcakeRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(recipe: CupcakeRecipe) {
             binding.imageView13.setImageResource(recipe.imageResourceId)
             binding.txtCarrotCupcake.text = recipe.title
